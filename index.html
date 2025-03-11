@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nafsity</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="data/mental-agility.png" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="brand">نـــفـــســـي</div>
+      <ul class="nav-links">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#test">اختبار الحالة</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h1>مرحبا بكم في نفسي - تقييم حالتك النفسية الآن</h1>
+      <p>
+        نحن هنا لمساعدتك في تقييم حالتك النفسية والحصول على الدعم الذي تحتاجه.
+        ابدأ الآن بتقييم حالتك النفسية.
+      </p>
+    </section>
+
+    <!-- Test Section -->
+    <section class="test-section" id="test">
+      <div class="test-header">
+        <h2 class="section-title">اختبار الحالة النفسية</h2>
+        <button class="start-test-btn" id="startTestBtn">ابدأ الاختبار</button>
+      </div>
+
+      <div class="test-container" id="testContainer">
+        <div class="progress">
+          <span id="exit-test" class="exit-btn">مغادرة</span>
+          <span id="question-number">1/16</span>
+        </div>
+
+        <div class="question" id="question-container"></div>
+
+        <div class="navigation" id="navigation">
+          <button class="nav-button" id="next-btn">التالي</button>
+          <button class="nav-button" id="prev-btn" disabled>السابق</button>
+        </div>
+
+        <div class="result" id="result-container">
+          <div class="result-circle">
+            <div class="circle-bg"></div>
+            <div class="circle-progress"></div>
+            <div class="circle-inner">
+              <div class="percentage">0%</div>
+            </div>
+          </div>
+          <h3 id="result-title"></h3>
+          <div class="result-advice" id="result-advice"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="alertModal">
+      <div class="modal-content">
+        <h3>تنبيه!</h3>
+        <p>من فضلك، قم بالإجابة على السؤال قبل المتابعة.</p>
+        <button class="modal-close-btn" id="closeModalBtn">حسنًا</button>
+      </div>
+    </div>
+
+    <section class="services" id="services">
+      <h2 class="section-title">الخدمات</h2>
+      <div class="services-grid">
+        <!-- الباقة الصغير -->
+        <div class="service-card">
+          <h3 class="package-title">نفس سريع</h3>
+          <ul class="features-list">
+            <li>دعم سريع</li>
+            <li>نصيحة</li>
+            <li>تمرين بسيط</li>
+            <li>المدة 15 دقيقة</li>
+          </ul>
+          <div class="price">3 دينار</div>
+          <a href="https://wa.me/21627157647?text=مرحبًا، أريد الاشتراك في باقة نفس سريع" class="subscribe-btn">
+           اشترك الآن <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- الباقة التوفيق -->
+        <div class="service-card">
+          <h3 class="package-title">لحظة تواصل</h3>
+          <ul class="features-list">
+            <li>استماع فعال</li>
+            <li>ملخص</li>
+            <li>نصيحة موجزة</li>
+            <li>المدة 30 دقيقة</li>
+          </ul>
+          <div class="price">5 دينار</div>
+          <a href="https://wa.me/21627157647?text=مرحبًا، أريد الاشتراك في باقة لحظة تواصل" class="subscribe-btn">
+             اشترك الآن <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- الباقة الكبير -->
+        <div class="service-card">
+          <h3 class="package-title">خطوة للأمام</h3>
+          <ul class="features-list">
+            <li>3 استشارات (مدة الاستشارة 30 دقيقة) </li>
+            <li>دعم ممتد</li>
+            <li>خطة عمل</li>
+            <li>تقييم التقدم</li>
+          </ul>
+          <div class="price">20 دينار</div>
+          <a href="https://wa.me/21627157647?text=مرحبًا، أريد الاشتراك في باقة خطوة للأمام" class="subscribe-btn">
+            اشترك الآن <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="section-title">تواصل معنا</h2>
+      <form   action="https://formspree.io/f/xeoaqgve"
+      method="POST" class="contact-form">
+        <input name="name" type="text" placeholder="الاسم" required />
+        <input name="email" type="email" placeholder="البريد الإلكتروني" required />
+        <textarea name="message" placeholder="الرسالة" rows="5" required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/jihedhammed/" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>جميع الحقوق محفوظة © 2025</p>
+      <div class="developer">
+        Developed by
+        <a
+          href="https://www.instagram.com/3bdallah.pk"
+          target="_blank"
+          style="text-decoration: none"
+          >Abdullah Ahmed</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

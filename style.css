@@ -130,7 +130,7 @@ a {
 }
 
 .start-test-btn {
-  background: var(--primary-color);
+  background: #25d366;
   color: white;
   border: none;
   padding: 1rem 3rem;
@@ -615,4 +615,39 @@ a {
 
 .developer a:hover {
   color: white;
+}
+
+
+.disclaimer {
+  background-color: #fff3f3;
+
+  color: #dc3545;
+  padding: 1.5rem 2rem;
+  text-align: center; /* تغيير إلى center لمحاذاة النص في المنتصف */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex; /* الاحتفاظ بـ flex لمحاذاة العناصر داخليًا */
+  align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+  justify-content: center; /* محاذاة العناصر أفقيًا في المنتصف */
+  gap: 1rem;
+  transition: all 0.3s ease;
+  
+}
+
+.disclaimer:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.disclaimer i {
+  font-size: 1.5rem;
+  color: #dc3545;
+}
+
+.disclaimer p {
+  margin: 0;
+  line-height: 1.6;
 }

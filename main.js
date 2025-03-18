@@ -185,13 +185,7 @@ function showResult() {
 
 
 // عند تحميل الصفحة أو النقر على رابط
-document.addEventListener("DOMContentLoaded", function() {
-    // إزالة الهاش من الـ URL
-    if (window.location.hash) {
-        let cleanPath = window.location.pathname + window.location.hash.replace('#', '');
-        window.history.replaceState(null, null, cleanPath);
-    }
-});
+
 
 
 
@@ -199,3 +193,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 // Initialize
 showQuestion(0);
+
+document.addEventListener("DOMContentLoaded", function() {
+    // إزالة الهاش من الـ URL
+    if (window.location.hash) {
+        let cleanPath = window.location.pathname + window.location.hash.replace('#', '');
+        window.history.replaceState(null, null, cleanPath);
+    }
+});

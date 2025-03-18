@@ -182,5 +182,25 @@ function showResult() {
       console.error("Error:", error);
     });
 }
+
+
+// عند تحميل الصفحة أو النقر على رابط
+document.addEventListener("DOMContentLoaded", function() {
+    // إزالة الهاش من الـ URL
+    if (window.location.hash) {
+        let cleanPath = window.location.pathname + window.location.hash.replace('#', '');
+        window.history.replaceState(null, null, cleanPath);
+    }
+});
+
+// في حالة النقر على رابط معين
+document.querySelectorAll('a[href*="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const targetPath = this.getAttribute('href').replace('#', ''); // إزالة الهاش
+        window.history.pushState(null, null, targetPath); // تحديث الـ URL بدون الهاش
+
+    });
+});
 // Initialize
 showQuestion(0);

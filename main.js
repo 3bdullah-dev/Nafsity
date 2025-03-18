@@ -193,12 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// في حالة النقر على رابط معين
-document.querySelectorAll('a[href*="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        const targetPath = this.getAttribute('href').replace('#', ''); // إزالة الهاش
-        window.history.pushState(null, null, targetPath); // تحديث الـ URL بدون الهاش
+
 
     });
 });

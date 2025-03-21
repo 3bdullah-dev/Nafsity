@@ -191,7 +191,7 @@ function showResult() {
 
     });
 });
-// Initialize
+
+Initialize
 showQuestion(0);
 
-//

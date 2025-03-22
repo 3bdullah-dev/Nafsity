@@ -182,16 +182,5 @@ function showResult() {
       console.error("Error:", error);
     });
 }
-
-
-//
-
-
-
-
-    });
-});
-
-Initialize
+// Initialize
 showQuestion(0);
-

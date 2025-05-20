@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nafsity</title>
-    <meta name="description" content="موقع لأختبار وتحسين الحالة النفسية وإعطاء نصائح لتحسين المزاج.">
+    <meta
+      name="description"
+      content="موقع لأختبار وتحسين الحالة النفسية وإعطاء نصائح لتحسين المزاج."
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="https://github.com/3bdullah-dev/Nafsity/blob/main/mental-agility.png?raw=true" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://github.com/3bdullah-dev/Nafsity/blob/main/mental-agility.png?raw=true"
+    />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -15,6 +22,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style></style>
   </head>
   <body>
@@ -35,7 +44,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" data-aos="fade-up" data-aos-duration="1000">
       <h1>مرحبا بكم في نفسي - تقييم حالتك النفسية الآن</h1>
       <p>
         نحن هنا لمساعدتك في تقييم حالتك النفسية والحصول على الدعم الذي تحتاجه.
@@ -45,7 +54,7 @@
 
     <!-- Test Section -->
     <section class="test-section" id="test">
-      <div class="test-header">
+      <div class="test-header" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="section-title">اختبار الحالة النفسية</h2>
         <button class="start-test-btn" id="startTestBtn">ابدأ الاختبار</button>
       </div>
@@ -87,17 +96,22 @@
     </div>
 
     <section class="services" id="services">
-      <h2 class="section-title">الخدمات</h2>
+      <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+        الخدمات
+      </h2>
       <div class="services-grid">
         <!-- الباقة الصغير -->
-        <div class="service-card">
-          <h3 class="package-title">نفس سريع</h3>
+        <div
+          class="service-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <h3 class="package-title">فرغ قلبك</h3>
           <ul class="features-list">
-            <li>حصتين</li>
-            <li>دعم سريع</li>
-            <li>نصيحة</li>
-            <li>تمرين بسيط</li>
-            <li>المدة 30 دقيقة</li>
+            <li><i class="fas fa-bolt"></i>دعم سريع</li>
+            <li><i class="fas fa-lightbulb"></i>نصيحة</li>
+            <li><i class="fas fa-clock"></i>المدة 30 دقيقة</li>
           </ul>
           <div class="price">5 دينار</div>
           <a
@@ -107,48 +121,10 @@
             اشترك الآن <i class="fab fa-whatsapp"></i>
           </a>
         </div>
-
-        <!-- الباقة التوفيق -->
-        <div class="service-card">
-          <h3 class="package-title">لحظة تواصل</h3>
-          <ul class="features-list">
-            <li>ثلاث حصص</li>
-            <li>استماع فعال</li>
-            <li>ملخص</li>
-            <li>نصيحة موجزة</li>
-            <li>المدة 35 دقيقة</li>
-          </ul>
-          <div class="price">10 دينار</div>
-          <a
-            href="https://wa.me/21627157647?text=مرحبًا، أريد الاشتراك في باقة لحظة تواصل"
-            class="subscribe-btn"
-          >
-            اشترك الآن <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-
-        <!-- الباقة الكبير -->
-        <div class="service-card">
-          <h3 class="package-title">خطوة للأمام</h3>
-          <ul class="features-list">
-            <li>اربع حصص</li>
-            <li>دعم ممتد</li>
-            <li>خطة عمل</li>
-            <li>تقييم التقدم</li>
-            <li>المدة 45 دقيقة</li>
-          </ul>
-          <div class="price">20 دينار</div>
-          <a
-            href="https://wa.me/21627157647?text=مرحبًا، أريد الاشتراك في باقة خطوة للأمام"
-            class="subscribe-btn"
-          >
-            اشترك الآن <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
       </div>
     </section>
 
-        <div class="disclaimer">
+    <div class="disclaimer" data-aos="fade-up" data-aos-duration="1000">
       <i class="fas fa-exclamation-triangle"></i>
       <p>
         تنويه هام: أنا لست طبيبًا نفسيًا أو معالجًا مرخصًا. أنا هنا لأقدم لك
@@ -160,20 +136,43 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-      <h2 class="section-title">تواصل معنا</h2>
-      <form   action="https://formspree.io/f/xeoaqgve"
-      method="POST" class="contact-form">
+      <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">
+        تواصل معنا
+      </h2>
+      <form
+        action="https://formspree.io/f/xeoaqgve"
+        method="POST"
+        class="contact-form"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
         <input name="name" type="text" placeholder="الاسم" required />
-        <input name="email" type="email" placeholder="البريد الإلكتروني" required />
-        <textarea name="message" placeholder="الرسالة" rows="5" required></textarea>
+        <input
+          name="email"
+          type="email"
+          placeholder="البريد الإلكتروني"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="الرسالة"
+          rows="5"
+          required
+        ></textarea>
         <button type="submit">إرسال</button>
       </form>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000">
       <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61574190331456" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61574190331456"
+          class="social-icon"
+          rel="noopener"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
       </div>
       <p>جميع الحقوق محفوظة © 2025</p>
       <div class="developer">
@@ -189,5 +188,37 @@
 
     <script src="questions.js"></script>
     <script src="main.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        once: true, // Animation will occur only once
+        offset: 100, // Offset (in px) from the original trigger point
+        duration: 1000, // Values from 0 to 3000, with step 50ms
+      });
+
+      function updateResult(score) {
+        const percentage = (score / 100) * 100;
+        const circleProgress = document.querySelector(".circle-progress");
+        const percentageElement = document.querySelector(".percentage");
+        let currentPercentage = 0;
+        const interval = setInterval(() => {
+          if (currentPercentage >= percentage) {
+            clearInterval(interval);
+          } else {
+            currentPercentage += 1;
+            percentageElement.textContent = currentPercentage + "%";
+            circleProgress.style.strokeDashoffset =
+              440 - (440 * currentPercentage) / 100;
+            if (currentPercentage < 50) {
+              circleProgress.style.stroke = "red";
+            } else {
+              circleProgress.style.stroke = "green";
+            }
+          }
+        }, 20);
+      }
+    </script>
   </body>
 </html>

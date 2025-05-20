@@ -140,7 +140,33 @@ function showResult() {
   const resultTitle = document.getElementById("result-title");
   const resultAdvice = document.getElementById("result-advice");
 
-  percentageText.textContent = `${percentage}%`;
+  // حركة احترافية للنسبة والمؤشر الدائري
+  let current = 0;
+  const duration = 1500; // مدة الحركة بالمللي ثانية
+  const stepTime = 10; // كل كم مللي ثانية تزيد النسبة
+  const steps = Math.ceil(duration / stepTime);
+  const increment = percentage / steps;
+
+  function animate() {
+    current += increment;
+    if (current > percentage) current = percentage;
+    const displayPercent = Math.round(current);
+    percentageText.textContent = `${displayPercent}%`;
+    // تحديث لون المؤشر
+    const color =
+      displayPercent < 50 ? "var(--danger-color)" : "var(--success-color)";
+    // conic-gradient
+    circleProgress.style.background = `conic-gradient(${color} 0% ${displayPercent}%, transparent ${displayPercent}% 100%)`;
+    if (current < percentage) {
+      requestAnimationFrame(animate);
+    } else {
+      // تعيين النسبة النهائية بدقة
+      percentageText.textContent = `${percentage}%`;
+      circleProgress.style.background = `conic-gradient(${color} 0% ${percentage}%, transparent ${percentage}% 100%)`;
+    }
+  }
+  animate();
+
   if (percentage < 50) {
     resultTitle.textContent = "تقييمك: دون المتوسط";
   } else if (percentage > 50 && percentage < 75) {
@@ -154,12 +180,6 @@ function showResult() {
       : percentage > 50 && percentage < 70
       ? "نصيحة: نفسية جيدة و لكن اذا كنت تريد استشارة مرحبا بك."
       : "نفسيتك عالي العال";
-
-  const color =
-    percentage < 50 ? "var(--danger-color)" : "var(--success-color)";
-  circleProgress.style.setProperty("--progress-color", color);
-  circleProgress.style.setProperty("--progress-percentage", `${percentage}%`);
-  circleProgress.style.animation = "fillProgress 0.3s ease-in-out forwards";
 
   const dataToSend = {
     result: `${percentage}%`,
